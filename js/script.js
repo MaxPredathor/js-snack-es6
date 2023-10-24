@@ -13,14 +13,14 @@ const invitati = [
 ];
 
 const invitatiFormato = [];
-let i = 1;
+let place = 1;
 invitati.forEach((Element) =>{
     let pattern = {
                     tableName: 'VIP',
                     guestName: Element,
-                    place: i
+                    place: place
                   }
-    i++
+    place++
     invitatiFormato.push(pattern);
 });
 console.log(invitatiFormato);
