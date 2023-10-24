@@ -71,6 +71,10 @@ const aula = studenti.map((Element) =>{
 console.log(aula);
 
 
+const votoId = studenti.filter((studente) => (studente.Grades > 70 && studente.Id > 120));
+const voto = studenti.filter((studente) => studente.Grades > 70);
+console.log(votoId);
+console.log(voto);
 
 
 
