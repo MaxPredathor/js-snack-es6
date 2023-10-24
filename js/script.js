@@ -11,16 +11,15 @@ const invitati = [
     'Maneskin'
 ];
 
-const inivtatiFormato = [];
-
+const invitatiFormato = [];
 let i = 1;
 invitati.forEach((Element) =>{
     let pattern = {
                     tableName: 'VIP',
                     guestName: Element,
                     place: i
-                }
-i++
-inivtatiFormato.push(pattern);
-})
-console.log(inivtatiFormato);
+                  }
+    i++
+    invitatiFormato.push(pattern);
+});
+console.log(invitatiFormato);
