@@ -76,5 +76,50 @@ const voto = studenti.filter((studente) => studente.Grades > 70);
 console.log(votoId);
 console.log(voto);
 
+/* ************ SNACK 3 *************** */
+const bici = [
+    {
+        nome:'Bianchi',
+        peso:  100
+    },
+    {
+        nome:'Atala',
+        peso:  78
+    },
+    {
+        nome:'Olmo',
+        peso:  45
+    },
+    {
+        nome:'Casati',
+        peso:  65
+    },
+    {
+        nome:'Colnago',
+        peso:  120
+    },
+    {
+        nome:'Bottecchia',
+        peso:  34
+    },
+    {
+        nome:'Pistidda',
+        peso: 83
+    }
+];
 
+const biciLeggera = [];
+bici.forEach((element, index) => {
+    const {peso} = bici[index];
+    biciLeggera.push(peso);
+});
+
+const result = bici.filter((element) => {
+    return element.nome && element.peso === Math.min(...biciLeggera);
+})
+
+//  if(element.peso === lowest){
+//      biciLeggera.push(element.nome, element.peso)
+//  }
+console.log(result);
 
