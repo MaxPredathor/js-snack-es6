@@ -118,8 +118,56 @@ const result = bici.filter((element) => {
     return element.nome && element.peso === Math.min(...biciLeggera);
 })
 
-//  if(element.peso === lowest){
-//      biciLeggera.push(element.nome, element.peso)
-//  }
-console.log(result);
+console.log(`la bici più leggera è: ${result[0].nome} e pesa: ${result[0].peso} kg`);
 
+/* ************ SNACK 4 *************** */
+
+const squadrePallone = [
+    {
+        nome: "Inter",
+        punti: 0,
+        falliSubiti: 0,
+    },
+    {
+        nome: "Milan",
+        punti: 0,
+        falliSubiti: 0,
+    },
+    {
+        nome: "Roma",
+        punti: 0,
+        falliSubiti: 0,
+    },
+    {
+        nome: "Lazio",
+        punti: 0,
+        falliSubiti: 0,
+    },
+    {
+        nome: "Napoli",
+        punti: 0,
+        falliSubiti: 0,
+    },
+];
+squadrePallone.forEach((element, index) => {
+    const copyNewSquadre = {...squadrePallone[index], punti: getRndInteger(1, 100), falliSubiti: getRndInteger(1, 25)};
+    console.log(copyNewSquadre);
+    const {nome, falliSubiti} = copyNewSquadre;
+    console.log({nome, falliSubiti});
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+  }
